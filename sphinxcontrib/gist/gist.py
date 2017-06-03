@@ -16,8 +16,6 @@ def visit(self, node):
     else:
         tag = u'''<script src="{0}.js">&nbsp;</script>'''.format(node.url)
 
-    print ("debug {0}".format(tag))
-
     self.body.append(tag)
 
 def depart(self, node):
@@ -47,4 +45,3 @@ class GistDirective(rst.Directive):
             node.file = ''
 
         return [node]
-    
